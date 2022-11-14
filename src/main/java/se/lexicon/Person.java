@@ -71,5 +71,13 @@ public class Person implements Comparable<Person> {
       return 0;
   }
 
-
+  @Override
+  public String toString() {
+    return "Person{" +
+            "id=" + id +
+            ", firstName='" + firstName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            ", email='" + email + '\'' +
+            '}';
+  }
 }

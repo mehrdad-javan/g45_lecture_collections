@@ -37,8 +37,8 @@ public class ArrayListDemo {
       }
     }*/
 
-    for (int i = 0 ; i < numbers.size() ; i++){
-      if (numbers.get(i) == 400){
+    for (int i = 0; i < numbers.size(); i++) {
+      if (numbers.get(i) == 400) {
         numbers.remove(numbers.get(i));
       }
     }
@@ -53,7 +53,7 @@ public class ArrayListDemo {
 
   }
 
-  public static void ex2(){
+  public static void ex2() {
     ArrayList<Integer> numbers = new ArrayList<>();
     numbers.add(100);
     numbers.add(100);
@@ -64,17 +64,17 @@ public class ArrayListDemo {
     Integer number = new Integer(100);
 
     boolean isRemove = numbers.remove(number);
-   Integer indexValue = numbers.remove(3);
+    Integer indexValue = numbers.remove(3);
 
-   for(Integer element: numbers){
-     System.out.println(element);
-   }
+    for (Integer element : numbers) {
+      System.out.println(element);
+    }
 
     System.out.println("Size: " + numbers.size());
 
   }
 
-  public static void ex3(){
+  public static void ex3() {
     ArrayList<String> euCars = new ArrayList<>();
     euCars.add("Volvo");
     euCars.add("BMW");
@@ -83,17 +83,16 @@ public class ArrayListDemo {
     ArrayList<String> usaCars = new ArrayList<>();
     usaCars.add("Tesla");
 
-    euCars.addAll(2,usaCars);
+    euCars.addAll(2, usaCars);
 
-    for (String element: euCars){
+    for (String element : euCars) {
       System.out.println("element = " + element);
     }
 
 
-
   }
 
-  public static void ex4(){
+  public static void ex4() {
     List<String> strings = new ArrayList<>();
     strings.add("D");
     strings.add("B");
@@ -108,14 +107,14 @@ public class ArrayListDemo {
 
   }
 
-  public static void ex5(){
+  public static void ex5() {
     String test1 = "TEST";
     String test2 = "TEST";
     boolean isResult = test1.equals(test2); // true
     System.out.println("isResult = " + isResult);
 
-    Person person1 = new Person(1,"Test1", "Test1", "test.test");
-    Person person2 = new Person(1,"Test1", "Test1", "test.test");
+    Person person1 = new Person(1, "Test1", "Test1", "test.test");
+    Person person2 = new Person(1, "Test1", "Test1", "test.test");
     boolean isResult2 = person1.equals(person2); // true
     //System.out.println(person1 + " - " + person2);
     System.out.println("isResult2 = " + isResult2);
@@ -125,7 +124,7 @@ public class ArrayListDemo {
 
   }
 
-  public static void ex6(){
+  public static void ex6() {
     List<Person> people = new ArrayList<>();
     people.add(new Person(1, "test2", "test22", "test.test"));
     people.add(new Person(3, "test1", "test11", "test.test"));
@@ -133,7 +132,7 @@ public class ArrayListDemo {
     people.add(new Person(1, "test3", "test33", "test.test"));
 
     Collections.sort(people);
-    for (Person person: people){
+    for (Person person : people) {
       System.out.println(person.getId() + " " + person.getFirstName());
     }
 
@@ -145,12 +144,17 @@ public class ArrayListDemo {
       }
     });
 
-    for (Person person: people){
+    for (Person person : people) {
       System.out.println(person.getId() + " " + person.getFirstName());
     }
 
   }
 
+  public static void ex7() {
+    List<Person> people = Arrays.asList(
+            new Person(1, "test", "test", "test.test"),
+            new Person(1, "test", "test", "test.test"));
+  }
 
 }
 
